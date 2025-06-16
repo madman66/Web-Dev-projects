@@ -1,0 +1,267 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px; /* To account for fixed header */
+}
+
+/* Header Section */
+header {
+    background-color: #f8f9fa; /* Neutral background */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand .logo-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important; /* Primary color for hover */
+}
+
+/* Hero Section */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('C:\Users\arun\Downloads\untitled\Starter Kit (3)\Capstone Project\assets\images\hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    color: white;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+#hero .divider {
+    border-top: 3px solid #ffc107; /* Warning color for emphasis */
+    width: 80px;
+    opacity: 1; /* Ensure visibility */
+}
+
+/* Services Section */
+#services .service-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15) !important;
+}
+
+#services .service-item i {
+    color: #007bff; /* Primary color for icons */
+    transition: color 0.3s ease;
+}
+
+#services .service-item:hover i {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+/* Banner Section */
+#banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('C:\Users\arun\Downloads\untitled\Starter Kit (3)\Capstone Project\assets\images\banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    color: white;
+}
+
+#banner h3 .text-warning {
+    font-weight: 700;
+}
+
+/* About Us Section */
+#about table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#about table th,
+#about table td {
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+#about table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row color */
+}
+
+/* Learning Plan Section */
+#learning-plan {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('C:\Users\arun\Downloads\untitled\Starter Kit (3)\Capstone Project\assets\images\plan-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 600px;
+}
+
+#learning-plan .custom-form-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white card */
+    color: #333; /* Dark text for readability on card */
+}
+
+#learning-plan .form-label {
+    font-weight: 500;
+}
+
+#learning-plan .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#learning-plan .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Testimonials Section */
+.testimonial-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.testimonial-card .testimonial-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff; /* Primary color for controls */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Contact Section */
+.map-container {
+    height: 400px;
+}
+
+.contact-info p {
+    margin-bottom: 0;
+}
+
+.contact-info i {
+    color: #007bff; /* Primary color for contact icons */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 557px) {
+    /* Header */
+    .navbar-collapse {
+        text-align: center;
+        background-color: #f8f9fa;
+        border-top: 1px solid #eee;
+    }
+    .nav-item {
+        border-bottom: 1px solid #eee;
+    }
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Hero Section */
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+
+    /* Services Section (Bootstrap handles 1-column automatically with col-md-6) */
+
+    /* Banner Section */
+    #banner h3 {
+        font-size: 2rem;
+    }
+    #banner .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    /* About Us Section */
+    #about table thead th.d-md-table-cell,
+    #about table tbody td.d-md-table-cell {
+        display: none; /* Hide columns not critical on mobile */
+    }
+
+    #about table, #about tbody, #about tr, #about td {
+        display: block;
+        width: 100%;
+    }
+
+    #about tr {
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    #about td {
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    #about td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    /* Learning Plan Section */
+    #learning-plan .col-lg-6.d-none.d-lg-block {
+        display: none !important; /* Hide the image */
+    }
+    #learning-plan .col-lg-6 {
+        width: 100%; /* Make the form take full width */
+    }
+
+    /* Testimonials Section */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none !important; /* Remove carousel controls */
+    }
+    .testimonial-card {
+        padding: 20px !important;
+    }
+    .testimonial-card .lead {
+        font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .map-container {
+        height: 300px; /* Adjust map height for smaller screens */
+    }
+}
+
+/* Custom data-label for About Us section for mobile responsiveness */
+/* This part ensures the labels appear when columns are hidden */
+@media (max-width: 767px) { /* Adjust breakpoint as needed for table responsiveness */
+    #about table td:nth-of-type(1):before { content: "Course Title"; }
+    #about table td:nth-of-type(2):before { content: "Duration"; }
+    #about table td:nth-of-type(3):before { content: "Difficulty"; }
+    #about table td:nth-of-type(4):before { content: "Instructor"; }
+}
